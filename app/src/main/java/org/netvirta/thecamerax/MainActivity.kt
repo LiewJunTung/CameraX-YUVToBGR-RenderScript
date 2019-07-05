@@ -84,23 +84,19 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
     private fun getCameraCharacteristics(context: Context) {
         manager = context.getSystemService(Context.CAMERA_SERVICE) as CameraManager
         try {
-            if (manager != null) {
-                for (id in manager!!.cameraIdList) {
-                    val characteristics = manager!!.getCameraCharacteristics(id)
+            for (id in manager.cameraIdList) {
+                val characteristics = manager.getCameraCharacteristics(id)
 
-                    val lensFacing = characteristics.get(CameraCharacteristics.LENS_FACING)!!
+                val lensFacing = characteristics.get(CameraCharacteristics.LENS_FACING)!!
 
-                    val size = characteristics[CameraCharacteristics.SENSOR_INFO_ACTIVE_ARRAY_SIZE]
-                    val mSensorWidth = size.right - size.left
-                    val mSensorHeight = size.bottom - size.top
-                    if (lensFacing == CameraCharacteristics.LENS_FACING_BACK) {
-                        println("BACK $size width: $mSensorWidth height: $mSensorHeight")
-                    } else if (lensFacing == CameraCharacteristics.LENS_FACING_FRONT) {
-                        println("FRONT $size width: $mSensorWidth height: $mSensorHeight")
-                    }
+                val size = characteristics[CameraCharacteristics.SENSOR_INFO_ACTIVE_ARRAY_SIZE]
+                val mSensorWidth = size.right - size.left
+                val mSensorHeight = size.bottom - size.top
+                if (lensFacing == CameraCharacteristics.LENS_FACING_BACK) {
+                    println("BACK $size width: $mSensorWidth height: $mSensorHeight")
+                } else if (lensFacing == CameraCharacteristics.LENS_FACING_FRONT) {
+                    println("FRONT $size width: $mSensorWidth height: $mSensorHeight")
                 }
-            } else {
-                throw RuntimeException("Camera Manager is not available.")
             }
         } catch (e: CameraAccessException) {
             e.printStackTrace()
@@ -268,8 +264,6 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
                     }
                     matrix.postRotate(-rotationDegrees.toFloat(), centerX, centerY)
 
-                    // Finally, apply transformations to our TextureView
-
                     viewFinder.post {
                         val bm = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
                         bm.copyPixelsFromBuffer(buffer)
@@ -277,8 +271,6 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
                         my_image.setImageBitmap(bm)
 
                     }
-//                }
-
                     lastAnalyzedTimestamp = currentTimestamp
                     image.close()
                 }
