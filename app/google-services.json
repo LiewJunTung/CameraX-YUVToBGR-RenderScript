@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "181114838323",
+    "firebase_url": "https://netvirta-scanning.firebaseio.com",
+    "project_id": "netvirta-scanning",
+    "storage_bucket": "netvirta-scanning.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:181114838323:android:9cf323f4f7885cda",
+        "android_client_info": {
+          "package_name": "com.netvirta.nativeandroidscanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "181114838323-kp0ce89p53r7v9islvh5c83fm380spbv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSo8ZHbZgcZjYjBste7x-KqrrsVJVeV48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "181114838323-kp0ce89p53r7v9islvh5c83fm380spbv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:181114838323:android:6c07bce1c4b0f4d7",
+        "android_client_info": {
+          "package_name": "org.netvirta.thecamerax"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "181114838323-so4oj515m782e6cuojthjqktp45mirnk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.netvirta.thecamerax",
+            "certificate_hash": "ceb3bd06ac41ee8185bb7e4e1ae25346adc2ba81"
+          }
+        },
+        {
+          "client_id": "181114838323-kp0ce89p53r7v9islvh5c83fm380spbv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSo8ZHbZgcZjYjBste7x-KqrrsVJVeV48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "181114838323-kp0ce89p53r7v9islvh5c83fm380spbv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
